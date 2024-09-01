@@ -1,4 +1,6 @@
 <?php
+session_start();
+include '../Controllers/ProtectDashboard.php';
 include '../../config/database.php';
 $sql = mysqli_query($conexion , "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor` FROM `proveedor`")or
 die("Problemas en el select:" . mysqli_error($conexion));

@@ -1,4 +1,6 @@
 <?php 
+session_start();
+include '../Controllers/ProtectDashboard.php';
 include '../../config/database.php';
 include '../../public/css/Plugins.php';
 $sql=mysqli_query($conexion, "SELECT `idcliente`, `identidad`, `nombre`, `telefono`, `direccion` FROM `cliente`") or

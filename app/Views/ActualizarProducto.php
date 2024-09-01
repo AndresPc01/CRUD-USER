@@ -1,4 +1,6 @@
 <?php
+session_start();
+include '../Controllers/ProtectDashboard.php';
 include '../../config/database.php';
 $idproducto = $_REQUEST["idproducto"];
 $nombre_producto = $_REQUEST["nombre_producto"]; 

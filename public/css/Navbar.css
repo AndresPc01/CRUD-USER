@@ -1,0 +1,12 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 15px;
+    padding: 5px;
+}
+
+#dropdown{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,4 +1,6 @@
 <?php 
+session_start();
+include '../Controllers/ProtectDashboard.php';
 include '../../config/database.php';
 include '../../public/css/Plugins.php';
 $sql=mysqli_query($conexion, "SELECT `idproducto`, `nombre_producto`, `cantidad`, `precio_unidad`, `idproveedorfk` FROM `producto`") or

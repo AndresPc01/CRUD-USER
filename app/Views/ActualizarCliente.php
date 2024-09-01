@@ -1,4 +1,6 @@
 <?php
+session_start();
+include '../Controllers/ProtectDashboard.php';
 $idcliente = $_REQUEST["idcliente"];
 $identidad = $_REQUEST["identidad"];
 $nombre = $_REQUEST["nombre"];

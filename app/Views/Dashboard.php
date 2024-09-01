@@ -1,3 +1,7 @@
+<?php
+session_start();
+include '../Controllers/ProtectDashboard.php';
+?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
 
