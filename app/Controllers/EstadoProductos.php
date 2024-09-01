@@ -3,7 +3,9 @@ include '../../config/database.php';
 $idproducto = $_REQUEST["idproducto"];
 $estado_producto = $_REQUEST["estado_producto"]; 
 
-if ($estado_producto === 'Habilitado') {
+if ($estado_producto === 'Desabilitado') {
+    $estado = 1;
+}else if ($estado_producto === 'Habilitado') {
     $estado = 2;
 }
 

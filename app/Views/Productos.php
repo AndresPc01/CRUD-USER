@@ -1,10 +1,6 @@
 <?php 
 session_start();
 include '../Controllers/ProtectDashboard.php';
-include '../../config/database.php';
-include '../../public/css/Plugins.php';
-$sql=mysqli_query($conexion, "SELECT `idproducto`, `nombre_producto`, `cantidad`, `precio_unidad`, `idproveedorfk`,IF(estado_producto=1,'Habilitado','Desabilitado')AS estado_producto FROM `producto`;") or
-die("Problemas en el select:" . mysqli_error($conexion));
 ?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
@@ -25,7 +21,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
                     PRODUCTOS
                 </h1>
                 <div class="d-flex align-items-center" style="margin-left:35px;">
-                    <a href="./AgregarProducto.php" class=" btn btn-info ">Agregar Nuevo Cliente</a>
+                    <a href="./AgregarProducto.php" class=" btn btn-info ">Agregar Nuevo Producto</a>
                 </div>
             </div>
             <nav>

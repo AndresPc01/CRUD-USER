@@ -2,14 +2,13 @@
 session_start();
 include '../Controllers/ProtectDashboard.php';
 include '../../config/database.php';
-include '../../public/css/Plugins.php';
 $sql=mysqli_query($conexion, "SELECT `idproducto`, `nombre_producto`, `cantidad`, `precio_unidad`, `idproveedorfk`,IF(estado_producto=1,'Habilitado','Desabilitado')AS estado_producto FROM `producto`;") or
 die("Problemas en el select:" . mysqli_error($conexion));
 ?>
 
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 text-center">
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -40,10 +39,10 @@ die("Problemas en el select:" . mysqli_error($conexion));
                     <td><?php echo "$ ".$fila['precio_unidad']." COP"; ?></td>
                     <td><?php echo $fila['idproveedorfk']; ?></td>
                     <td><?php echo $row['nombre_proveedor']; ?></td>
-                    <td><?php echo $fila['estado_producto'];?></td>
+                    <td class="bg-success"><?php echo $fila['estado_producto'];?></td>
                     <td><a href="./ActualizarProducto.php?idproducto=<?php echo $fila['idproducto'] ?>&nombre_producto=<?php echo $fila['nombre_producto'] ?>&cantidad=<?php echo $fila['cantidad'] ?>&precio_unidad=<?php echo $fila['precio_unidad']?>&idproveedorfk=<?php echo $fila['idproveedorfk']?>&estado_producto=<?php echo $fila['estado_producto']?> "
                             class="btn btn-primary">Actualizar</a></td>
-                    <td><a href="../Controllers/DesabilitarProductos.php?idproducto=<?php echo $fila['idproducto'] ?>&estado_producto=<?php echo $fila['estado_producto']?> "
+                    <td><a href="../Controllers/EstadoProductos.php?idproducto=<?php echo $fila['idproducto'] ?>&estado_producto=<?php echo $fila['estado_producto']?> "
                             class="btn btn-danger">Desabilitar</a></td>
                     </td>
                     <?php }  ?>

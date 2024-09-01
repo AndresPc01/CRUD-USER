@@ -1,9 +1,6 @@
 <?php
 session_start();
 include '../Controllers/ProtectDashboard.php';
-include '../../config/database.php';
-$sql = mysqli_query($conexion , "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor` FROM `proveedor` ")or 
-die("Problemas en el select : " .mysqli_error($conexion));
 ?>
 
 <!DOCTYPE html>
@@ -34,38 +31,29 @@ die("Problemas en el select : " .mysqli_error($conexion));
             </div>
 
             <div class=" row">
-                <div class="col-md-12">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre Proveedor</th>
-                                <th>telefono </th>
-                                <th>ciudad</th>
-                                <th>Actualizar</th>
-                                <th>Eliminar</th>
-                            </tr>
-                        </thead>
-                        <?php
-                    while($fila = mysqli_fetch_array($sql)){
- ?>
-                        <tbody>
-                            <tr>
-                                <td><?php echo $fila['idproveedor']; ?></td>
-                                <td><?php echo $fila['nombre_proveedor']; ?></td>
-                                <td><?php echo $fila['telefono_proveedor']; ?></td>
-                                <td><?php echo $fila['ciudad_proveedor']; ?></td>
-                                <td><a href="./ActualizarProveedor.php?idproveedor=<?php echo $fila['idproveedor'] ?>&nombre_proveedor=<?php echo $fila['nombre_proveedor'] ?>&telefono_proveedor=<?php echo $fila['telefono_proveedor'] ?>&ciudad_proveedor=<?php echo $fila['ciudad_proveedor']?>"
-                                        class="btn btn-primary">Actualizar</a></td>
-                                <td><a href="./EliminarProveedor.php?idproveedor=<?php echo $fila['idproveedor'] ?>&nombre_proveedor=<?php echo $fila['nombre_proveedor'] ?>&telefono_proveedor=<?php echo $fila['telefono_proveedor'] ?>&ciudad_proveedor=<?php echo $fila['ciudad_proveedor']?>"
-                                        class="btn btn-primary">Eliminar</a></td>
-                            <tr>
-                        </tbody>
-                        <?php       
- }
-?>
-                    </table>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">Proveedores Habilitado</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Proveedores
+                            Desabilitados</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Total De
+                            Proveedores</button>
+
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                        tabindex="0"><?php include '../../resources/views/ProveedorTabla.php' ?></div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                        tabindex="0"><?php include '../../resources/views/ProveedorDesabilitados.php' ?></div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
+                        tabindex="0"><?php include '../../resources/views/ProveedorTotal.php' ?></div>
                 </div>
+
             </div>
         </div>
 

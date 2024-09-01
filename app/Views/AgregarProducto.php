@@ -2,7 +2,7 @@
 session_start();
 include '../Controllers/ProtectDashboard.php';
 include '../../config/database.php';
-$sql = mysqli_query($conexion , "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor` FROM `proveedor`")or
+$sql = mysqli_query($conexion , "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor`, `estado_proveedor` FROM `proveedor`")or
 die("Problemas en el select:" . mysqli_error($conexion));
 ?>
 <!DOCTYPE html>
@@ -37,7 +37,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
                             <label for="inputPassword4">Cantidad</label>
                             <div class="input-group" style="">
                                 <span class="input-group-text">En Stock</span>
-                                <input type="text" name="cantidad" class="form-control">
+                                <input type="number" name="cantidad" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
                                 <span class="input-group-text">COP</span>
                                 <input readonly class="input-group-text" style="width:35px;  text-align: end;" value="$"
                                     name="idproducto" />
-                                <input type="text" name="precio_unidad" class="form-control">
+                                <input type="number" name="precio_unidad" class="form-control">
                             </div>
                         </div>
                         <div class="form-group col-md-6 ">
@@ -56,17 +56,20 @@ die("Problemas en el select:" . mysqli_error($conexion));
                             <select name="idproveedorfk" class="form-select form-select-lg mb-1">
                                 <option selected>Selecciona</option>
                                 <?php
+                                
                             while($fila = mysqli_fetch_array($sql)){
+                                if ($fila['estado_proveedor'] === '1') {
                                 ?>
                                 <option>
                                     <?php echo $fila['nombre_proveedor'];?>
                                 </option>
                                 <?php }
+                                }
                                 ?>
                             </select>
                         </div>
-                        <div class="form-group col-md-6 ">
-                            <label for="inputPassword4">Proveedor</label>
+                        <div class="form-group col-md-12 ">
+                            <label for="inputPassword4">Seleccione Estado de Producto</label>
                             <select name="estado_producto" class="form-select form-select-lg mb-1">
                                 <option selected>Selecciona</option>
                                 <option>Habilitado</option>
