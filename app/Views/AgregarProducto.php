@@ -19,7 +19,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/AgregarProductoLogica.php">
+        <form method="post" action="../Services/AgregarProveedorLogica.php">
             <div class="container-form">
                 <h1>Agregar Producto</h1>
                 <div>

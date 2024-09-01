@@ -16,6 +16,7 @@
                         <a class="nav-link active" aria-current="page" href="../../app/Views/Usuarios.php">Usuarios</a>
                         <a class="nav-link" href="../../app/Views/Productos.php">Productos</a>
                         <a class="nav-link" href="../../app/Views/Clientes.php">Clientes</a>
+                        <a class="nav-link" href="../../app/Views/Proveedor.php">Proveedores</a>
                     </div>
                 </div>
             </div>
