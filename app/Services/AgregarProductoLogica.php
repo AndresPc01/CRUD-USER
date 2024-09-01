@@ -4,7 +4,6 @@ $nombre_producto =$_REQUEST["nombre_producto"];
 $cantidad =$_REQUEST["cantidad"];
 $precio_unidad =$_REQUEST["precio_unidad"];
 $idproveedorfk =$_REQUEST["idproveedorfk"]; 
-
 $res  =mysqli_query($conexion,"SELECT `idproveedor`FROM `proveedor` WHERE `nombre_proveedor`='$idproveedorfk'");
 $row = mysqli_fetch_array($res);
 $val = $row['idproveedor'];

@@ -15,7 +15,7 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizar user</title>
+    <title>Eliminar Proveedor</title>
     <?php include '../../public/css/Plugins.php'; ?>
     <link rel="stylesheet" href="../../public/css/ActualizarProductos.css">
 </head>
@@ -23,7 +23,7 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/EliminarProductoLogica.php">
+        <form method="post" action="../Services/EliminarProveedorLogica.php">
             <div class="container-form">
                 <h1>Eliminar Proveedor</h1>
                 <div>
@@ -33,17 +33,16 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
                             <div class="input-group" style="margin-left:-5px;">
                                 <span class="input-group-text">ID</span>
                                 <input readonly class="input-group-text" style="width:35px;  text-align: end;"
-                                    value="<?php echo $idproducto; ?>" name="idproducto" />
-                                <input type="text" readonly name="nombre_producto" class="form-control"
-                                    value=<?php echo $nombre_producto; ?>>
+                                    value="<?php echo $idproveedor; ?>" name="idproveedor" />
+                                <input type="text" readonly class="form-control" value=<?php echo $nombre_proveedor; ?>>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Telefono</label>
                             <div class="input-group" style="">
                                 <span class="input-group-text">En Stock</span>
-                                <input type="text" name="cantidad" readonly class="form-control"
-                                    value=<?php echo $cantidad; ?>>
+                                <input type="text" readonly class="form-control"
+                                    value=<?php echo $telefono_proveedor; ?>>
                             </div>
                         </div>
                     </div>
@@ -54,15 +53,14 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
                                 <span class="input-group-text">COP</span>
                                 <input readonly class="input-group-text" style="width:35px;  text-align: end;"
                                     value="$" />
-                                <input type="text" name="precio_unidad" readonly class="form-control"
-                                    value=<?php echo $precio_unidad; ?>>
+                                <input type="text" readonly class="form-control" value=<?php echo $ciudad_proveedor; ?>>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <input type="submit" class="btn btn-danger mt-5" value="Confirmar Eliminacion">
-                <a type="button" class="btn btn-secondary" href="./Productos.php">Volver</a>
+                <a type="button" class="btn btn-secondary" href="./Proveedor.php">Volver</a>
             </div>
 
         </form>
