@@ -1,4 +1,6 @@
 <?php
+
+
 include '../../config/database.php';
 $idusuario =$_REQUEST["idusuario"];
 $nombre =$_REQUEST["nombre"];

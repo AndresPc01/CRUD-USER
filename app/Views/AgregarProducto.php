@@ -65,6 +65,14 @@ die("Problemas en el select:" . mysqli_error($conexion));
                                 ?>
                             </select>
                         </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="inputPassword4">Proveedor</label>
+                            <select name="estado_producto" class="form-select form-select-lg mb-1">
+                                <option selected>Selecciona</option>
+                                <option>Habilitado</option>
+                                <option>Desabilitado</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <input type="submit" class="btn btn-success mt-5" value="Guardar">

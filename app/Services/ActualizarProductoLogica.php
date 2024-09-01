@@ -16,5 +16,4 @@ $sql = mysqli_query($conexion , "UPDATE `producto` SET `nombre_producto`='$nombr
 header("location:../Views/Productos.php");
 
 
-
 ?>
