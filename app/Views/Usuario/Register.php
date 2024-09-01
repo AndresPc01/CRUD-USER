@@ -15,13 +15,13 @@
             <div class="container-form">
                 <h1>Register</h1>
                 <div>
-                    <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                    <input type="text" name="nombre" required class="form-control" placeholder="Nombre">
                 </div>
                 <div>
-                    <input type="text" name="usuario" class="form-control" placeholder="Usuario">
+                    <input type="text" name="usuario" required class="form-control" placeholder="Usuario">
                 </div>
                 <div>
-                    <input type="password" name="contraseña" class="form-control" placeholder="Password">
+                    <input type="password" name="contraseña" required class="form-control" placeholder="Password">
                 </div>
                 <input type="submit" class="btn btn-primary" value="Registrarse">
                 <span style="color:black;">Si tienes cuenta <a href="../../public/index.php">Logueate</a></span>

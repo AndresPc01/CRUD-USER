@@ -32,7 +32,6 @@ include '../Controllers/ProtectDashboard.php';
                     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
                         type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Productos
                         Desabilitado</button>
-
                 </div>
             </nav>
             <div class=" tab-content" id="nav-tabContent">

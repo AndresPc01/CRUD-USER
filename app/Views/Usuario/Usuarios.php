@@ -1,8 +1,8 @@
 <?php 
 session_start();
-include '../Controllers/ProtectDashboard.php';
-include '../../config/database.php';
-include '../../public/css/Plugins.php';
+include '../../Controllers/ProtectDashboard.php';
+include '../../../config/database.php';
+include '../../../public/css/Plugins.php';
 $sql=mysqli_query($conexion, "SELECT `idusuario`, `usuario`, `contrasena`, `nombre` FROM `usuario`") or
 die("Problemas en el select:" . mysqli_error($conexion));
 ?>
@@ -16,7 +16,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
 </head>
 
 <body>
-    <?php include '../../resources/views/Navbar.php'; ?>
+    <?php include '../../../resources/views/Navbar.php'; ?>
 
     <div class="container"
         style="margin-top:15px; background-color:#343A40; padding:10px; border:1px solid; border-radius:15px; min-height:80vh; ">

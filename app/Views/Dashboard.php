@@ -14,6 +14,8 @@ include '../Controllers/ProtectDashboard.php';
 
 <body>
     <?php include '../../resources/views/Navbar.php'; ?>
+
+    <h1>Buenos dias </h1>
 </body>
 
 </html>

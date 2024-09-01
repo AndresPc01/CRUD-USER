@@ -27,7 +27,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
             <?php
                     while($fila = mysqli_fetch_array($sql)){
                         $var = $fila['idproveedorfk'];
-                        $res  =mysqli_query($conexion,"SELECT `nombre_proveedor`FROM `proveedor` WHERE `idproveedor`='$var'");
+                        $res  =mysqli_query($conexion,"SELECT `nombre_proveedor`,`estado_proveedor`FROM `proveedor` WHERE `idproveedor`='$var'");
                         $row = mysqli_fetch_array($res);
  ?>
             <tbody>
@@ -38,7 +38,16 @@ die("Problemas en el select:" . mysqli_error($conexion));
                     <td><?php echo $fila['cantidad']; ?></td>
                     <td><?php echo "$ ".$fila['precio_unidad']." COP"; ?></td>
                     <td><?php echo $fila['idproveedorfk']; ?></td>
+                    <?php if ($row['estado_proveedor'] === '2') { 
+                    ?>
+                    <td class="d-flex flex-column bg-danger mx-1"><?php echo $row['nombre_proveedor']; ?>
+                        <small>(Proveedor
+                            desabilitado)</small>
+                    </td>
+
+                    <?php } else {   ?>
                     <td><?php echo $row['nombre_proveedor']; ?></td>
+                    <?php }?>
                     <td class="bg-danger"><?php echo $fila['estado_producto'];?></td>
                     <td><a href="../../app/Controllers/EstadoProductos.php?idproducto=<?php echo $fila['idproducto'] ?>&nombre_producto=<?php echo $fila['nombre_producto'] ?>&cantidad=<?php echo $fila['cantidad'] ?>&precio_unidad=<?php echo $fila['precio_unidad']?>&idproveedorfk=<?php echo $fila['idproveedorfk']?>&estado_producto=<?php echo $fila['estado_producto']?> "
                             class="btn btn-success">Habilitar</a></td>

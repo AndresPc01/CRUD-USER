@@ -15,10 +15,10 @@
             <div class="container-form">
                 <h1>Login</h1>
                 <div>
-                    <input type="text" name="usuario" class="form-control" placeholder="Usuario">
+                    <input type="text" required name="usuario" class="form-control" placeholder="Usuario">
                 </div>
                 <div>
-                    <input type="password" name="contraseña" class="form-control" placeholder="Password">
+                    <input type="password" required name="contraseña" class="form-control" placeholder="Password">
                 </div>
                 <input type="submit" class="btn btn-primary" value="Iniciar Sesion">
                 <span style="color:black;">Si no tienes cuenta <a href="../app/Views/Register.php">Registrate</a></span>

@@ -1,22 +1,31 @@
 <?php
 session_start();
 include '../../config/database.php';
-$usuario = $_REQUEST["usuario"];
-$contraseña = $_REQUEST["contraseña"];
-$hash_contraseña = md5($contraseña);
 
-$sql = mysqli_query($conexion , "SELECT `usuario`, `contrasena`, `nombre` FROM `usuario` WHERE  `usuario` = '$usuario' AND `contrasena` = '$hash_contraseña' ");
-$fecth = mysqli_fetch_array($sql);
-$dat = $fecth['nombre'];
-$row = mysqli_num_rows($sql);
-if ($row){
-    $_SESSION['nombre'] = $dat;
-    header('location:../Views/Dashboard.php');
-} else {
-    ?>
+if (isset($_REQUEST["usuario"]) && isset($_REQUEST["contraseña"])) {
+    $usuario = $_REQUEST["usuario"];
+    $contraseña = $_REQUEST["contraseña"];
+    $hash_contraseña = md5($contraseña);
+
+    $sql = mysqli_query($conexion, "SELECT `usuario`, `contrasena`, `nombre` FROM `usuario` WHERE `usuario` = '$usuario' AND `contrasena` = '$hash_contraseña' ");
+    $fetch = mysqli_fetch_array($sql);
+    $row = mysqli_num_rows($sql);
+
+    if ($fetch && $row > 0) {  // Ensure $fetch is not false
+        $_SESSION['nombre'] = $fetch['nombre'];
+        header('location:../Views/Dashboard.php');
+    } else {
+        ?>
 <script>
-alert("Usuario o password no existe");
+alert("Usuario o contraseña no existe");
 </script>
 <?php
+    }
+} else { 
+    ?>
+<script>
+alert("Campos vacíos");
+</script>
+<?php 
 }
 ?>

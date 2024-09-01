@@ -5,7 +5,6 @@ include '../../config/database.php';
 $sql = mysqli_query($conexion , "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor`, IF(estado_proveedor=1,'Habilitado','Desabilitado')AS estado_proveedor FROM `proveedor` ")or 
 die("Problemas en el select : " .mysqli_error($conexion));
 ?>
-
 <div class="col-md-12 text-center">
     <table class="table table-hover">
         <thead>
