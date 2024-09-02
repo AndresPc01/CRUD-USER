@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../Controllers/ProtectDashboard.php';
-include '../../config/database.php';
+include '../../Controllers/ProtectDashboard.php';
+include '../../../config/database.php';
 $idproveedor = $_REQUEST["idproveedor"];
 $nombre_proveedor = $_REQUEST["nombre_proveedor"]; 
 $telefono_proveedor = $_REQUEST["telefono_proveedor"]; 
@@ -16,14 +16,14 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Proveedor</title>
-    <?php include '../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../public/css/ActualizarProductos.css">
+    <?php include '../../../public/css/Plugins.php'; ?>
+    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/ActualizarProveedorLogica.php">
+        <form method="post" action="../../Services/ActualizarProveedorLogica.php">
             <div class="container-form">
                 <h1>Actualizar Proveedor</h1>
                 <div>

@@ -13,7 +13,7 @@ $val = $row['idproveedor'];
 
 $sql = mysqli_query($conexion , "UPDATE `producto` SET `nombre_producto`='$nombre_producto',`cantidad`='$cantidad',`precio_unidad`='$precio_unidad',`idproveedorfk`='$val' WHERE `idproducto`='$idproducto'");
 
-header("location:../Views/Productos.php");
+header("location:/Proyectos/CRUD-USER/app/Views/Productos/Productos.php");
 
 
 ?>

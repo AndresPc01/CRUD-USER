@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-include '../Controllers/ProtectDashboard.php';
+include '../../Controllers/ProtectDashboard.php';
 ?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
@@ -9,10 +9,11 @@ include '../Controllers/ProtectDashboard.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD USUARIOS</title>
+    <?php include '../../../public/css/Plugins.php' ?>
 </head>
 
 <body>
-    <?php include '../../resources/views/Navbar.php'; ?>
+    <?php include '../Navbar.php'; ?>
     <div class="container"
         style="margin-top:15px; background-color:#343A40; padding:10px; border:1px solid; border-radius:15px; min-height:80vh; ">
         <div class="row">
@@ -21,7 +22,7 @@ include '../Controllers/ProtectDashboard.php';
                     PRODUCTOS
                 </h1>
                 <div class="d-flex align-items-center" style="margin-left:35px;">
-                    <a href="./AgregarProducto.php" class=" btn btn-info ">Agregar Nuevo Producto</a>
+                    <a href="./AgregarProducto" class=" btn btn-info ">Agregar Nuevo Producto</a>
                 </div>
             </div>
             <nav>
@@ -37,9 +38,10 @@ include '../Controllers/ProtectDashboard.php';
             <div class=" tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
                     tabindex="0">
-                    <?php include '../../resources/views/ProductosTabla.php' ?></div>
+                    <?php include './ProductosTabla.php' ?>
+                </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
-                    tabindex="0"> <?php include '../../resources/views/ProductosDesabilitados.php' ?></div>
+                    tabindex="0"> <?php include './ProductosDesabilitados.php'; ?></div>
             </div>
         </div>
     </div>

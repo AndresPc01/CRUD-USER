@@ -1,10 +1,10 @@
 <?php
 session_start();
-include '../Controllers/ProtectDashboard.php';
+include '../../Controllers/ProtectDashboard.php';
 $idusuario = $_REQUEST["idusuario"];
-$usuario = $_REQUEST["usuario"]; 
-$contraseña = $_REQUEST["contraseña"]; 
-$nombre = $_REQUEST["nombre"]; 
+$usuario = $_REQUEST["usuario"];
+$contraseña = $_REQUEST["contraseña"];
+$nombre = $_REQUEST["nombre"];
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +14,8 @@ $nombre = $_REQUEST["nombre"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar user</title>
-    <?php include '../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../public/css/ActualizarUser.css">
+    <?php include '../../../public/css/Plugins.php'; ?>
+    <link rel="stylesheet" href="../../../public/css/ActualizarUser.css">
 </head>
 
 <body>

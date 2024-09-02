@@ -18,5 +18,5 @@ $row = mysqli_fetch_array($res);
 $val = $row['idproveedor'];
 $sql = mysqli_query($conexion, "INSERT INTO `producto`(`nombre_producto`, `cantidad`,`precio_unidad`,`idproveedorfk`,`estado_producto`) VALUES ('$nombre_producto','$cantidad','$precio_unidad','$val','$estado')");
 
-header("location:../Views/Productos.php");
+header("location:../Views/Productos/Productos.php");
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../Controllers/ProtectDashboard.php';
+include '../../Controllers/ProtectDashboard.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,11 +10,11 @@ include '../Controllers/ProtectDashboard.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD PROVEEDORES</title>
-    <?php include '../../public/css/Plugins.php' ?>
+    <?php include '../../../public/css/Plugins.php' ?>
 </head>
 
 <body>
-    <?php include '../../resources/views/Navbar.php'; ?>
+    <?php include '../Navbar.php'; ?>
     <div class="container"
         style="margin-top:15px; background-color:#343A40; padding:10px; border:1px solid; border-radius:15px; min-height:80vh; ">
         <div class="row">
@@ -47,11 +47,11 @@ include '../Controllers/ProtectDashboard.php';
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
-                        tabindex="0"><?php include '../../resources/views/ProveedorTabla.php' ?></div>
+                        tabindex="0"><?php include './ProveedorTabla.php' ?></div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
-                        tabindex="0"><?php include '../../resources/views/ProveedorDesabilitados.php' ?></div>
+                        tabindex="0"><?php include './ProveedorDesabilitados.php' ?></div>
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
-                        tabindex="0"><?php include '../../resources/views/ProveedorTotal.php' ?></div>
+                        tabindex="0"><?php include './ProveedorTotal.php' ?></div>
                 </div>
 
             </div>
