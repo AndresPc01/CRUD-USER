@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../Controllers/ProtectDashboard.php';
-include '../../config/database.php';
+include '../../Controllers/ProtectDashboard.php';
+include '../../../config/database.php';
 ?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
@@ -10,14 +10,14 @@ include '../../config/database.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Proveedor</title>
-    <?php include '../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../public/css/ActualizarProductos.css">
+    <?php include '../../../public/css/Plugins.php'; ?>
+    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/AgregarProveedorLogica.php">
+        <form method="post" action="../../Services/Proveedores/AgregarProveedorLogica.php">
             <div class="container-form">
                 <h1>Agregar Proveedor</h1>
                 <div>

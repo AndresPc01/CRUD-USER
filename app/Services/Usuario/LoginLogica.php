@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../config/database.php';
+include '../../../config/database.php';
 
 if (isset($_REQUEST["usuario"]) && isset($_REQUEST["contraseña"])) {
     $usuario = $_REQUEST["usuario"];
@@ -13,19 +13,19 @@ if (isset($_REQUEST["usuario"]) && isset($_REQUEST["contraseña"])) {
 
     if ($fetch && $row > 0) {  // Ensure $fetch is not false
         $_SESSION['nombre'] = $fetch['nombre'];
-        header('location:../Views/menu/Dashboard.php');
+        header('location:../../Views/Dashboard/Dashboard.php');
     } else {
         ?>
-        <script>
-            alert("Usuario o contraseña no existe");
-        </script>
-        <?php
+<script>
+alert("Usuario o contraseña no existe");
+</script>
+<?php
     }
 } else {
     ?>
-    <script>
-        alert("Campos vacíos");
-    </script>
-    <?php
+<script>
+alert("Campos vacíos");
+</script>
+<?php
 }
 ?>

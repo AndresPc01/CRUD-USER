@@ -22,7 +22,7 @@ include '../../Controllers/ProtectDashboard.php';
                     PRODUCTOS
                 </h1>
                 <div class="d-flex align-items-center" style="margin-left:35px;">
-                    <a href="./AgregarProducto" class=" btn btn-info ">Agregar Nuevo Producto</a>
+                    <a href="./AgregarProducto.php" class=" btn btn-info ">Agregar Nuevo Producto</a>
                 </div>
             </div>
             <nav>
@@ -33,6 +33,9 @@ include '../../Controllers/ProtectDashboard.php';
                     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
                         type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Productos
                         Desabilitado</button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Total De
+                        Productos</button>
                 </div>
             </nav>
             <div class=" tab-content" id="nav-tabContent">
@@ -42,6 +45,8 @@ include '../../Controllers/ProtectDashboard.php';
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
                     tabindex="0"> <?php include './ProductosDesabilitados.php'; ?></div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
+                    tabindex="0"><?php include './ProductosTotal.php' ?></div>
             </div>
         </div>
     </div>

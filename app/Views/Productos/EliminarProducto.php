@@ -26,7 +26,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
 <body>
 
     <div class="container">
-        <form method="post" action="../../Services/EliminarProductoLogica.php">
+        <form method="post" action="../../Services/Productos/EliminarProductoLogica.php">
             <div class="container-form">
                 <h1>Eliminar Producto</h1>
                 <div>
@@ -80,6 +80,8 @@ die("Problemas en el select:" . mysqli_error($conexion));
                                     </option>
                                     <?php }
                                 ?>
+
+
                                 </select>
                             </div>
                         </div>

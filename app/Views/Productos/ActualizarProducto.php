@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../Controllers/ProtectDashboard.php';
-include '../../config/database.php';
+include '../../Controllers/ProtectDashboard.php';
+include '../../../config/database.php';
 $idproducto = $_REQUEST["idproducto"];
 $nombre_producto = $_REQUEST["nombre_producto"]; 
 $cantidad = $_REQUEST["cantidad"]; 
@@ -19,14 +19,14 @@ die("Problemas en el select:" . mysqli_error($conexion));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Producto</title>
-    <?php include '../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../public/css/ActualizarProductos.css">
+    <?php include '../../../public/css/Plugins.php'; ?>
+    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/ActualizarProductoLogica.php">
+        <form method="post" action="../../Services/Productos/ActualizarProductoLogica.php">
             <div class="container-form">
                 <h1>Actualizar Producto</h1>
                 <div>
@@ -35,7 +35,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
                             <label for="">Nombre Producto</label>
                             <div class="input-group" style="margin-left:-5px;">
                                 <span class="input-group-text">ID</span>
-                                <input readonly class="input-group-text" style="width:35px;  text-align: end;"
+                                <input readonly class="input-group-text" style="width:50px;  text-align: end;"
                                     value="<?php echo $idproducto; ?>" name="idproducto" />
                                 <input type="text" name="nombre_producto" class="form-control"
                                     value=<?php echo $nombre_producto; ?>>

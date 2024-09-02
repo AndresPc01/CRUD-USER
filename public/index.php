@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <form method="post" action="../app/Services/LoginLogica.php">
+        <form method="post" action="../app/Services/Usuario/LoginLogica.php">
             <div class="container-form">
                 <h1>Login</h1>
                 <div>
@@ -21,9 +21,9 @@
                     <input type="password" required name="contraseña" class="form-control" placeholder="Password">
                 </div>
                 <input type="submit" class="btn btn-primary" value="Iniciar Sesion">
-                <span style="color:black;">Si no tienes cuenta <a href="../app/Views/Register.php">Registrate</a></span>
+                <span style="color:black;">Si no tienes cuenta <a
+                        href="../app/Views/Usuario/Register.php">Registrate</a></span>
             </div>
-
         </form>
 
     </div>

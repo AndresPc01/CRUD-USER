@@ -23,7 +23,7 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
 <body>
 
     <div class="container">
-        <form method="post" action="../../Services/ActualizarProveedorLogica.php">
+        <form method="post" action="../../Services/Proveedores/ActualizarProveedorLogica.php">
             <div class="container-form">
                 <h1>Actualizar Proveedor</h1>
                 <div>

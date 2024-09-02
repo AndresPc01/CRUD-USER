@@ -28,7 +28,7 @@
                 </button>
 
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/Proyectos/CRUD-USER/app/Services/CerrarSesionLogica.php">Cerrar
+                    <li><a class="dropdown-item" href="../../Services/Usuario/CerrarSesionLogica.php">Cerrar
                             Sesion</a>
                     </li>
                 </ul>

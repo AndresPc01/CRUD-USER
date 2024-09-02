@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^usuario/actualizar$ Views/Usuario/ActualizarUser.php [L]
+RewriteRule ^usuario/eliminar$ Views/Usuario/EliminarUser.php [L]
+RewriteRule ^usuario/registrar$ Views/Usuario/Register.php [L]
+RewriteRule ^usuario/lista$ Views/Usuario/Usuarios.php [L]
+
+RewriteRule ^Cliente$ Views/Cliente/Cliente.php [L]
+RewriteRule ^Cliente/eliminar$ Views/Cliente/EliminarCliente.php [L]
+RewriteRule ^Cliente/registrar$ Views/Cliente/AgregarCliente.php [L]
+RewriteRule ^Cliente/Actualizar$ Views/Cliente/ActualizarCliente.php [L]
+

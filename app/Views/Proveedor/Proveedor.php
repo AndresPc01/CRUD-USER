@@ -25,7 +25,7 @@ include '../../Controllers/ProtectDashboard.php';
                     </h1>
                 </div>
                 <div class="d-flex align-items-center" style="margin-left:35px;">
-                    <a href="./AgregarProveedor.php" class=" btn btn-info ">Agregar Nuevo Cliente</a>
+                    <a href="./AgregarProveedor.php" class=" btn btn-info ">Agregar Nuevo Proveedor</a>
                 </div>
 
             </div>

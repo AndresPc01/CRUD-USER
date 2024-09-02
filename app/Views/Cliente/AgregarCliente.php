@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-include '../Controllers/ProtectDashboard.php'; ?>
+include '../../Controllers/ProtectDashboard.php'; ?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
 
@@ -8,14 +8,14 @@ include '../Controllers/ProtectDashboard.php'; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Producto</title>
-    <?php include '../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../public/css/ActualizarProductos.css">
+    <?php include '../../../public/css/Plugins.php'; ?>
+    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/AgregarClienteLogica.php">
+        <form method="post" action="../Services/Cliente/AgregarClienteLogica.php">
             <div class="container-form">
                 <h1>Agregar Cliente</h1>
                 <div>

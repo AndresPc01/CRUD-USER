@@ -20,7 +20,7 @@ $direccion = $_REQUEST["direccion"];
 
 <body>
     <div class="container">
-        <form method="post" action="../Services/EliminarClienteLogica.php">
+        <form method="post" action="../Services/Cliente/EliminarClienteLogica.php">
             <div class="container-form">
                 <h1>Eliminar Cliente</h1>
                 <div>

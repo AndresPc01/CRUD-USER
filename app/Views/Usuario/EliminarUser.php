@@ -21,7 +21,7 @@ $nombre = $_REQUEST["nombre"];
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/EliminarUserLogica.php">
+        <form method="post" action="../Services/Usuario/EliminarUserLogica.php">
             <div class="container-form">
                 <h1>Eliminar Datos </h1>
 

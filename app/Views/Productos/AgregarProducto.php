@@ -2,8 +2,8 @@
 session_start();
 include '../../Controllers/ProtectDashboard.php';
 include '../../../config/database.php';
-$sql = mysqli_query($conexion , "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor`, `estado_proveedor` FROM `proveedor`")or
-die("Problemas en el select:" . mysqli_error($conexion));
+$sql = mysqli_query($conexion, "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor`, `estado_proveedor` FROM `proveedor`") or
+    die("Problemas en el select:" . mysqli_error($conexion));
 ?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
@@ -19,7 +19,7 @@ die("Problemas en el select:" . mysqli_error($conexion));
 <body>
 
     <div class="container">
-        <form method="post" action="../../Services/AgregarProductoLogica.php">
+        <form method="post" action="../../Services/Productos/AgregarProductoLogica.php">
             <div class="container-form">
                 <h1>Agregar Producto</h1>
                 <div>
@@ -56,12 +56,12 @@ die("Problemas en el select:" . mysqli_error($conexion));
                             <select name="idproveedorfk" class="form-select form-select-lg mb-1">
                                 <option selected>Selecciona</option>
                                 <?php
-                                
-                            while($fila = mysqli_fetch_array($sql)){
-                                if ($fila['estado_proveedor'] === '1') {
-                                ?>
+
+                                while ($fila = mysqli_fetch_array($sql)) {
+                                    if ($fila['estado_proveedor'] === '1') {
+                                        ?>
                                 <option>
-                                    <?php echo $fila['nombre_proveedor'];?>
+                                    <?php echo $fila['nombre_proveedor']; ?>
                                 </option>
                                 <?php }
                                 }

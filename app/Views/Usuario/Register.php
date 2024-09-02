@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <?php include '../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../public/css/Login.css">
+    <?php include '../../../public/css/Plugins.php'; ?>
+    <link rel="stylesheet" href="../../../public/css/Login.css">
 </head>
 
 <body>
     <div class="container">
-        <form method="post" autocomplete="off" action="../../app/Services/RegisterLogica.php">
+        <form method="post" autocomplete="off" action="../../app/Services/Usuario/RegisterLogica.php">
             <div class="container-form">
                 <h1>Register</h1>
                 <div>
@@ -24,7 +24,7 @@
                     <input type="password" name="contraseña" required class="form-control" placeholder="Password">
                 </div>
                 <input type="submit" class="btn btn-primary" value="Registrarse">
-                <span style="color:black;">Si tienes cuenta <a href="../../public/index.php">Logueate</a></span>
+                <span style="color:black;">Si tienes cuenta <a href="../../../public/index.php">Logueate</a></span>
             </div>
         </form>
     </div>

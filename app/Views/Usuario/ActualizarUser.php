@@ -21,7 +21,7 @@ $nombre = $_REQUEST["nombre"];
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/ActualizarUserLogica.php">
+        <form method="post" action="../Services/Usuario/ActualizarUserLogica.php">
             <div class="container-form">
                 <h1>Actualizar Datos </h1>
 
