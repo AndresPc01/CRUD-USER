@@ -1,8 +1,8 @@
 Crud de Usuarios , productos , clientes  y proveedores con consulta a base de datos local y registracion de los mismos como con su funcion de eliminar
 
-|| Cambios :  Reestructuracion de carpetas en la parte de view , nueva funcion donde se podra desabilitar proeevedor o producto. En la tabla de Producto se mostrara en rojo el proveedor que este desabilitado.
+|| Cambios :  Se agrego el archivo htaccess,hice urls amigables donde ya no se ven los directorios de carpetas igualmente no se si es la mejor manera de hacerlo ,pero de momento todo funciona correctamente
 
-|| Falta : Faltaria la Reestructuracion en la carpeta de servicios  y mejorar seguridad en la parte de logueo como asi en cada uno de los formularios. Esto de momento ,  otras cosas que se presenten para cambios se realizaran segun aparezcan. 
+|| Falta : Faltaria completar  el index publico y mejorar  el diseño  
 
 
 
