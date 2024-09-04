@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" style="margin-right:50px; color:#ddd; font-style: Serif; font-weight: bolder;"
-                    href="../menu/Dashboard.php">Home</a>
+                    href="../Dashboard/Dashboard.php">Home</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
