@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 include '../../../config/database.php';
 
@@ -13,19 +17,19 @@ if (isset($_REQUEST["usuario"]) && isset($_REQUEST["contraseña"])) {
 
     if ($fetch && $row > 0) {  // Ensure $fetch is not false
         $_SESSION['nombre'] = $fetch['nombre'];
-        header('location:../../Views/Dashboard/Dashboard.php');
+        header('location:../../../Home');
     } else {
         ?>
-<script>
-alert("Usuario o contraseña no existe");
-</script>
-<?php
+        <script>
+            alert("Usuario o contraseña no existe");
+        </script>
+        <?php
     }
 } else {
     ?>
-<script>
-alert("Campos vacíos");
-</script>
-<?php
+    <script>
+        alert("Campos vacíos");
+    </script>
+    <?php
 }
 ?>

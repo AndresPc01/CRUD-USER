@@ -43,19 +43,19 @@ $sql = mysqli_query($conexion, "SELECT `idusuario`, `usuario`, `contrasena`, `no
                         <?php
                         while ($fila = mysqli_fetch_array($sql)) {
                             ?>
-                        <tbody>
-                            <tr>
-                                <td><?php echo $fila['idusuario']; ?></td>
-                                <td><?php echo $fila['usuario']; ?></td>
-                                <td><?php echo $fila['contrasena']; ?></td>
-                                <td><?php echo $fila['nombre']; ?></td>
-                                <td><a href="./ActualizarUser.php?idusuario=<?php echo $fila['idusuario'] ?>&usuario=<?php echo $fila['usuario'] ?>&contraseña=<?php echo $fila['contrasena'] ?>&nombre=<?php echo $fila['nombre'] ?> "
-                                        class="btn btn-primary">Actualizar</a></td>
-                                <td><a href="./EliminarUser.php?idusuario=<?php echo $fila['idusuario'] ?>&usuario=<?php echo $fila['usuario'] ?>&contraseña=<?php echo $fila['contrasena'] ?>&nombre=<?php echo $fila['nombre'] ?> "
-                                        class="btn btn-primary">Eliminar</a></td>
-                            <tr>
-                        </tbody>
-                        <?php
+                            <tbody>
+                                <tr>
+                                    <td><?php echo $fila['idusuario']; ?></td>
+                                    <td><?php echo $fila['usuario']; ?></td>
+                                    <td><?php echo $fila['contrasena']; ?></td>
+                                    <td><?php echo $fila['nombre']; ?></td>
+                                    <td><a href="ActualizarUsuario?idusuario=<?php echo $fila['idusuario'] ?>&usuario=<?php echo $fila['usuario'] ?>&contraseña=<?php echo $fila['contrasena'] ?>&nombre=<?php echo $fila['nombre'] ?> "
+                                            class="btn btn-primary">Actualizar</a></td>
+                                    <td><a href="EliminarUsuario?idusuario=<?php echo $fila['idusuario'] ?>&usuario=<?php echo $fila['usuario'] ?>&contraseña=<?php echo $fila['contrasena'] ?>&nombre=<?php echo $fila['nombre'] ?> "
+                                            class="btn btn-primary">Eliminar</a></td>
+                                <tr>
+                            </tbody>
+                            <?php
                         }
                         ?>
                     </table>

@@ -11,5 +11,5 @@ if ($estado_producto === 'Desabilitado') {
 
 $sql = mysqli_query($conexion, "UPDATE `producto` SET `estado_producto`='$estado' WHERE `idproducto`='$idproducto'");
 
-header("location:../Productos.php");
+header("location:Productos");
 ?>

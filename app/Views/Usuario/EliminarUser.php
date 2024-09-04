@@ -15,7 +15,7 @@ $nombre = $_REQUEST["nombre"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar user</title>
     <?php include '../../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarUser.css">
+    <link rel="stylesheet" href="public/css/ActualizarUser.css">
 </head>
 
 <body>

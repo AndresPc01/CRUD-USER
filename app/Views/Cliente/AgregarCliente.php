@@ -9,13 +9,13 @@ include '../../Controllers/ProtectDashboard.php'; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Producto</title>
     <?php include '../../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../Services/Cliente/AgregarClienteLogica.php">
+        <form method="post" action="AgregarCLog">
             <div class="container-form">
                 <h1>Agregar Cliente</h1>
                 <div>
@@ -24,7 +24,7 @@ include '../../Controllers/ProtectDashboard.php'; ?>
                             <label for="">Identidad</label>
                             <div class="input-group" style="margin-left:-5px;">
                                 <span class="input-group-text">CC</span>
-                                <input type="text" name="identidad" class="form-control">
+                                <input type="text" maxlength="10" name="identidad" class="form-control">
                             </div>
                         </div>
                         <div class="form-group col-md-6">

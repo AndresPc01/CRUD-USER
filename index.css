@@ -1,0 +1,30 @@
+#cont {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#cont #button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 6px;
+    width: 15vh;
+
+
+}
+
+#cont>#button:first-of-type {
+    background: #1877F4;
+    color: white;
+}
+
+/* Seleccionar el segundo botón con el ID 'button' */
+#cont>#button:nth-of-type(2) {
+    background: #36A420;
+    color: white;
+}

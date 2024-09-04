@@ -3,12 +3,12 @@ session_start();
 include '../../Controllers/ProtectDashboard.php';
 include '../../../config/database.php';
 $idproducto = $_REQUEST["idproducto"];
-$nombre_producto = $_REQUEST["nombre_producto"]; 
+$nombre_producto = $_GET["nombre_producto"] ?? '';
 $cantidad = $_REQUEST["cantidad"]; 
 $precio_unidad = $_REQUEST["precio_unidad"]; 
 $idproveedorfk = $_REQUEST["idproveedorfk"]; 
 
-$sql = mysqli_query($conexion , "SELECT `nombre_proveedor` FROM `proveedor`")or
+$sql = mysqli_query($conexion , "SELECT `nombre_proveedor`, `estado_proveedor` FROM `proveedor`")or
 die("Problemas en el select:" . mysqli_error($conexion));
 ?>
 
@@ -20,13 +20,13 @@ die("Problemas en el select:" . mysqli_error($conexion));
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Producto</title>
     <?php include '../../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../../Services/Productos/ActualizarProductoLogica.php">
+        <form method="post" action="ActualizarPLog">
             <div class="container-form">
                 <h1>Actualizar Producto</h1>
                 <div>
@@ -38,7 +38,9 @@ die("Problemas en el select:" . mysqli_error($conexion));
                                 <input readonly class="input-group-text" style="width:50px;  text-align: end;"
                                     value="<?php echo $idproducto; ?>" name="idproducto" />
                                 <input type="text" name="nombre_producto" class="form-control"
-                                    value=<?php echo $nombre_producto; ?>>
+                                    value="<?php echo htmlspecialchars($nombre_producto, ENT_QUOTES, 'UTF-8'); ?>">
+
+
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -70,16 +72,24 @@ die("Problemas en el select:" . mysqli_error($conexion));
                                 <select name="idproveedorfk" class="form-select form-select-lg "
                                     style="font-size:1rem;">
                                     <?php
-                                     while($fila = mysqli_fetch_array($sql)){
+                                    while($fila = mysqli_fetch_array($sql)){
+                                     if ($fila['estado_proveedor'] === '1') {
                                         $var = $fila['idproveedorfk'];
                                         $res  =mysqli_query($conexion,"SELECT `nombre_proveedor`FROM `proveedor` WHERE `idproveedor`='$var'");
                                         $row = mysqli_fetch_array($res);
                                 ?>
                                     <option>
-                                        <?php echo $fila['nombre_proveedor'];?>
+                                        <?php
+                                       
+                                            echo $fila['nombre_proveedor'];
+                                        
+
+                                         ?>
                                     </option>
                                     <?php }
-                                ?>
+                                    }?>
+
+
                                 </select>
                             </div>
                         </div>

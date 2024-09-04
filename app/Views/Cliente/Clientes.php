@@ -58,7 +58,7 @@ $sql = mysqli_query($conexion, "SELECT `idcliente`, `identidad`, `nombre`, `tele
                                     <td><?php echo $fila['nombre']; ?></td>
                                     <td><?php echo $fila['telefono']; ?></td>
                                     <td><?php echo $fila['direccion']; ?></td>
-                                    <td><a href="./ActualizarCliente.php?idcliente=<?php echo $fila['idcliente'] ?>&identidad=<?php echo $fila['identidad'] ?>&telefono=<?php echo $fila['telefono'] ?>&nombre=<?php echo $fila['nombre'] ?>&direccion=<?php echo $fila['direccion'] ?> "
+                                    <td><a href="ActualizarCliente?idcliente=<?php echo $fila['idcliente'] ?>&identidad=<?php echo $fila['identidad'] ?>&telefono=<?php echo $fila['telefono'] ?>&nombre=<?php echo $fila['nombre'] ?>&direccion=<?php echo $fila['direccion'] ?> "
                                             class="btn btn-primary">Actualizar</a></td>
                                     <td><a href="./EliminarCliente.php?idcliente=<?php echo $fila['idcliente'] ?>&identidad=<?php echo $fila['identidad'] ?>&telefono=<?php echo $fila['telefono'] ?>&nombre=<?php echo $fila['nombre'] ?>&direccion=<?php echo $fila['direccion'] ?> "
                                             class="btn btn-primary">Eliminar</a></td>

@@ -1,8 +1,5 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-session_start();
+
 include '../../Controllers/ProtectDashboard.php';
 include '../../../config/database.php';
 $idproveedor = $_REQUEST["idproveedor"];
@@ -28,13 +25,13 @@ while ($row = mysqli_fetch_assoc($sql)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliminar Proveedor</title>
     <?php include '../../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../../Services/Proveedores/EliminarProveedorLogica.php">
+        <form method="post" action="EliminarPrLog">
             <div class="container-form">
                 <h1>Eliminar Proveedor</h1>
                 <div>
@@ -84,7 +81,7 @@ while ($row = mysqli_fetch_assoc($sql)) {
                 </div>
 
                 <input type="submit" class="btn btn-danger mt-5" value="Confirmar Eliminacion">
-                <a type="button" class="btn btn-secondary" href="./Proveedor.php">Volver</a>
+                <a type="button" class="btn btn-secondary" href="./Proveedores"> Volver</a>
             </div>
 
         </form>

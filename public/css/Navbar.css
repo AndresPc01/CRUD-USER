@@ -1,12 +1,10 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin: 15px;
-    padding: 5px;
+#header_nav{
+    padding: 15px;
+    font-size: 20px;
 }
 
 #dropdown{
     display: flex;
     flex-direction: column;
 }
+

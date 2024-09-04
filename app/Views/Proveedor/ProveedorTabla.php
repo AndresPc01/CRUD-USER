@@ -1,5 +1,4 @@
 <?php
-session_start();
 include '../../Controllers/ProtectDashboard.php';
 include '../../../config/database.php';
 $sql = mysqli_query($conexion, "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor`, IF(estado_proveedor=1,'Habilitado','Desabilitado')AS estado_proveedor FROM `proveedor` ") or
@@ -30,9 +29,9 @@ $sql = mysqli_query($conexion, "SELECT `idproveedor`, `nombre_proveedor`, `telef
                         <td><?php echo $fila['telefono_proveedor']; ?></td>
                         <td><?php echo $fila['ciudad_proveedor']; ?></td>
                         <td class="bg-success"><?php echo $fila['estado_proveedor']; ?></td>
-                        <td><a href="ActualizarProveedor.php?idproveedor=<?php echo $fila['idproveedor'] ?>&nombre_proveedor=<?php echo $fila['nombre_proveedor'] ?>&telefono_proveedor=<?php echo $fila['telefono_proveedor'] ?>&ciudad_proveedor=<?php echo $fila['ciudad_proveedor'] ?>"
+                        <td><a href="ActualizarProveedor?idproveedor=<?php echo $fila['idproveedor'] ?>&nombre_proveedor=<?php echo $fila['nombre_proveedor'] ?>&telefono_proveedor=<?php echo $fila['telefono_proveedor'] ?>&ciudad_proveedor=<?php echo $fila['ciudad_proveedor'] ?>"
                                 class="btn btn-primary">Actualizar</a></td>
-                        <td><a href="./Estado/EstadoProveedor.php?idproveedor=<?php echo $fila['idproveedor'] ?>&estado_proveedor=<?php echo $fila['estado_proveedor'] ?>"
+                        <td><a href="EstadoProveedor?idproveedor=<?php echo $fila['idproveedor'] ?>&estado_proveedor=<?php echo $fila['estado_proveedor'] ?>"
                                 class="btn btn-danger">Desabilitar</a></td>
                     <?php } ?>
                 <tr>

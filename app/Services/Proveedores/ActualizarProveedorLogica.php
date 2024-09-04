@@ -7,6 +7,6 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
 
 $sql = mysqli_query($conexion, "UPDATE `proveedor` SET `nombre_proveedor`='$nombre_proveedor',`telefono_proveedor`='$telefono_proveedor',`ciudad_proveedor`='$ciudad_proveedor' WHERE `idproveedor`='$idproveedor' ");
 
-header("location:../../Views/Proveedor/Proveedor.php");
+header("location:Proveedores");
 
 ?>

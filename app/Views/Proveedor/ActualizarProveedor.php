@@ -17,13 +17,13 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Proveedor</title>
     <?php include '../../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../../Services/Proveedores/ActualizarProveedorLogica.php">
+        <form method="post" action="ActualizarPrLog">
             <div class="container-form">
                 <h1>Actualizar Proveedor</h1>
                 <div>
@@ -60,7 +60,7 @@ $ciudad_proveedor = $_REQUEST["ciudad_proveedor"];
                 </div>
 
                 <input type="submit" class="btn btn-primary mt-5" value="Guardar">
-                <a type="button" class="btn btn-secondary" href="./Proveedor.php">Volver</a>
+                <a type="button" class="btn btn-secondary" href="Proveedores">Volver</a>
             </div>
 
         </form>

@@ -13,7 +13,7 @@ $sql = mysqli_query($conexion, "SELECT `idproveedor`, `nombre_proveedor`, `telef
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Producto</title>
     <?php include '../../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
@@ -60,10 +60,10 @@ $sql = mysqli_query($conexion, "SELECT `idproveedor`, `nombre_proveedor`, `telef
                                 while ($fila = mysqli_fetch_array($sql)) {
                                     if ($fila['estado_proveedor'] === '1') {
                                         ?>
-                                <option>
-                                    <?php echo $fila['nombre_proveedor']; ?>
-                                </option>
-                                <?php }
+                                        <option>
+                                            <?php echo $fila['nombre_proveedor']; ?>
+                                        </option>
+                                    <?php }
                                 }
                                 ?>
                             </select>

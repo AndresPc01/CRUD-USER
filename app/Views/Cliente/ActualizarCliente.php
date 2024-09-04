@@ -14,13 +14,14 @@ $direccion = $_REQUEST["direccion"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Producto</title>
-    <?php include '../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
+    <?php include '../../../public/css/Plugins.php' ?>
+
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
     <div class="container">
-        <form method="post" action="../../Services/Cliente/ActualizarClienteLogica.php">
+        <form method="post" action="ActualizarCLog">
             <div class="container-form">
                 <h1>Actualizar Cliente</h1>
                 <div>

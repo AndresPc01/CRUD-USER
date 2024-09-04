@@ -1,13 +1,61 @@
-RewriteEngine On
-RewriteBase /
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+#Index
+RewriteRule ^index\/? index.php [NC,L]
 
-RewriteRule ^usuario/actualizar$ Views/Usuario/ActualizarUser.php [L]
-RewriteRule ^usuario/eliminar$ Views/Usuario/EliminarUser.php [L]
-RewriteRule ^usuario/registrar$ Views/Usuario/Register.php [L]
-RewriteRule ^usuario/lista$ Views/Usuario/Usuarios.php [L]
+#Login
+RewriteRule ^Login\/? public/Login.php [NC,L]
+RewriteRule ^Register\/? app/Views/Usuario/Register.php [NC,L]
+#Clientes
+RewriteRule ^Clientes\/? app/Views/Cliente/Clientes.php [NC,L]
+RewriteRule ^AgregarCliente\/? app/Views/Cliente/AgregarCliente.php [NC,L]
+RewriteRule ^ActualizarCliente\/? app/Views/Cliente/ActualizarCliente.php [NC,L]
+RewriteRule ^EliminarCliente\/? app/Views/Cliente/EliminarCliente.php [NC,L]
+#CLientes Services
+RewriteRule ^ActualizarCLog\/? app/Services/Cliente/ActualizarClienteLogica.php [NC,L]
+RewriteRule ^EliminarCLog\/? app/Services/Cliente/EliminarClienteLogica.php [NC,L]
+RewriteRule ^AgregarCLog\/? app/Services/Cliente/AgregarClienteLogica.php [NC,L]
 
-RewriteRule ^Cliente$ Views/Cliente/Cliente.php [L]
-RewriteRule ^Cliente/eliminar$ Views/Cliente/EliminarCliente.php [L]
-RewriteRule ^Cliente/registrar$ Views/Cliente/AgregarCliente.php [L]
-RewriteRule ^Cliente/Actualizar$ Views/Cliente/ActualizarCliente.php [L]
+#Dashboard
+RewriteRule ^Home\/? app/Views/Dashboard/Dashboard.php [NC,L]
 
+#Productos
+RewriteRule ^Productos\/? app/Views/Productos/Productos.php [NC,L]
+RewriteRule ^AgregarProducto\/? app/Views/Productos/AgregarProducto.php [NC,L]
+RewriteRule ^ActualizarProducto$ app/Views/Productos/ActualizarProducto.php [NC,L]
+RewriteRule ^EliminarProducto$ app/Views/Productos/EliminarProducto.php [NC,L]
+RewriteRule ^EstadoProducto$ app/Views/Productos/Estado/EstadoProductos.php [NC,L]
+#Productos Services
+RewriteRule ^ActualizarPLog$ app/Services/Productos/ActualizarProductoLogica.php [NC,L]
+RewriteRule ^EliminarPLog$ app/Services/Productos/EliminarProductoLogica.php [NC,L]
+
+#Proveedores 
+RewriteRule ^Proveedores\/? app/Views/Proveedor/Proveedor.php [NC,L]
+RewriteRule ^AgregarProveedor\/? app/Views/Proveedor/AgregarProveedor.php [NC,L]
+RewriteRule ^ActualizarProveedor\/? app/Views/Proveedor/ActualizarProveedor.php [NC,L]
+RewriteRule ^EliminarProveedor\/? app/Views/Proveedor/EliminarProveedor.php [NC,L]
+RewriteRule ^EstadoProveedor\/? app/Views/Proveedor/Estado/EstadoProveedor.php [NC,L]
+
+#Proveedores Services
+RewriteRule ^ActualizarPrLog$ app/Services/Proveedores/ActualizarProveedorLogica.php [NC,L]
+RewriteRule ^AgregarPrLog$ app/Services/Proveedores/AgregarProveedorLogica.php [NC,L]
+RewriteRule ^EliminarPrLog$ app/Services/Proveedores/EliminarProveedorLogica.php [NC,L]
+
+
+
+
+
+#Usuarios
+RewriteRule ^Usuarios\/? app/Views/Usuario/Usuarios.php [NC,L]
+RewriteRule ^ActualizarUsuario$ app/Views/Usuario/ActualizarUser.php [NC,L]
+RewriteRule ^EliminarUsuario$ app/Views/Usuario/EliminarUser.php [NC,L]
+
+
+
+
+
+
+#CerrarSesion
+RewriteRule ^CloseSesion\/? app/Services/Usuario/CerrarSesionLogica.php [NC,L]

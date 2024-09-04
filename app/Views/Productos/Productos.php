@@ -22,7 +22,7 @@ include '../../Controllers/ProtectDashboard.php';
                     PRODUCTOS
                 </h1>
                 <div class="d-flex align-items-center" style="margin-left:35px;">
-                    <a href="./AgregarProducto.php" class=" btn btn-info ">Agregar Nuevo Producto</a>
+                    <a href="AgregarProducto" class=" btn btn-info ">Agregar Nuevo Producto</a>
                 </div>
             </div>
             <nav>

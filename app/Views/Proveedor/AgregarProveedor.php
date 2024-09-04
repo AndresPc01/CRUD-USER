@@ -11,13 +11,13 @@ include '../../../config/database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Proveedor</title>
     <?php include '../../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../../Services/Proveedores/AgregarProveedorLogica.php">
+        <form method="post" action="AgregarPrLog">
             <div class="container-form">
                 <h1>Agregar Proveedor</h1>
                 <div>
@@ -48,9 +48,17 @@ include '../../../config/database.php';
                             </div>
                         </div>
                     </div>
+                    <div class="form-group col-md-12 ">
+                        <label for="inputPassword4">Seleccione Estado de Proveedor</label>
+                        <select name="estado_proveedor" class="form-select form-select-lg mb-1">
+                            <option selected>Selecciona</option>
+                            <option>Habilitado</option>
+                            <option>Desabilitado</option>
+                        </select>
+                    </div>
                 </div>
                 <input type="submit" class="btn btn-success mt-5" value="Guardar">
-                <a type="button" class="btn btn-secondary" href="./Proveedor.php">Volver</a>
+                <a type="button" class="btn btn-secondary" href="Proveedores">Volver</a>
             </div>
         </form>
     </div>

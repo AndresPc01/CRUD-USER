@@ -9,5 +9,5 @@ if ($estado_proveedor === 'Desabilitado') {
     $estado = 2;
 }
 $sql = mysqli_query($conexion, "UPDATE `proveedor` SET `estado_proveedor`='$estado' WHERE `idproveedor`='$idproveedor'");
-header("location:../Proveedor.php");
+header("location:Proveedores");
 ?>

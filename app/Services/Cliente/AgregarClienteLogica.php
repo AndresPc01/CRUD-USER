@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include '../../../config/database.php';
 
 $identidad = $_REQUEST["identidad"];
@@ -8,5 +11,5 @@ $direccion = $_REQUEST["direccion"];
 
 $sql = mysqli_query($conexion, "INSERT INTO `cliente`(`identidad`, `nombre`,`telefono`,`direccion`) VALUES ('$identidad','$nombre','$telefono','$direccion')");
 
-header("location:../../Views/Productos.php");
+header("location:Clientes");
 ?>

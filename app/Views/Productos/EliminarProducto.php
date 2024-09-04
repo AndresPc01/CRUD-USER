@@ -20,13 +20,13 @@ die("Problemas en el select:" . mysqli_error($conexion));
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar user</title>
     <?php include '../../../public/css/Plugins.php'; ?>
-    <link rel="stylesheet" href="../../../public/css/ActualizarProductos.css">
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" action="../../Services/Productos/EliminarProductoLogica.php">
+        <form method="post" action="EliminarPLog">
             <div class="container-form">
                 <h1>Eliminar Producto</h1>
                 <div>
