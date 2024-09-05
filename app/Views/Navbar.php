@@ -18,7 +18,6 @@
             </div>
         </div>
         <div class="btn-group mx-4" id="dropdown">
-            <small>Bienvenido</small>
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 <?php echo strtoupper($_SESSION['nombre']); ?>

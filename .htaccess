@@ -13,6 +13,8 @@ RewriteRule ^Clientes\/? app/Views/Cliente/Clientes.php [NC,L]
 RewriteRule ^AgregarCliente\/? app/Views/Cliente/AgregarCliente.php [NC,L]
 RewriteRule ^ActualizarCliente\/? app/Views/Cliente/ActualizarCliente.php [NC,L]
 RewriteRule ^EliminarCliente\/? app/Views/Cliente/EliminarCliente.php [NC,L]
+RewriteRule ^EstadoCliente$ app/Views/Cliente/Estado/EstadoCliente.php [NC,L]
+
 #CLientes Services
 RewriteRule ^ActualizarCLog\/? app/Services/Cliente/ActualizarClienteLogica.php [NC,L]
 RewriteRule ^EliminarCLog\/? app/Services/Cliente/EliminarClienteLogica.php [NC,L]

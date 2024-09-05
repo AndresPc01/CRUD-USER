@@ -20,23 +20,23 @@ $sql = mysqli_query($conexion, "SELECT `idproveedor`, `nombre_proveedor`, `telef
         <?php
         while ($fila = mysqli_fetch_array($sql)) {
             ?>
-            <tbody>
-                <tr>
-                    <?php if ($fila['estado_proveedor'] === 'Habilitado') {
+        <tbody>
+            <tr>
+                <?php if ($fila['estado_proveedor'] === 'Habilitado') {
                         ?>
-                        <td><?php echo $fila['idproveedor']; ?></td>
-                        <td><?php echo $fila['nombre_proveedor']; ?></td>
-                        <td><?php echo $fila['telefono_proveedor']; ?></td>
-                        <td><?php echo $fila['ciudad_proveedor']; ?></td>
-                        <td class="bg-success"><?php echo $fila['estado_proveedor']; ?></td>
-                        <td><a href="ActualizarProveedor?idproveedor=<?php echo $fila['idproveedor'] ?>&nombre_proveedor=<?php echo $fila['nombre_proveedor'] ?>&telefono_proveedor=<?php echo $fila['telefono_proveedor'] ?>&ciudad_proveedor=<?php echo $fila['ciudad_proveedor'] ?>"
-                                class="btn btn-primary">Actualizar</a></td>
-                        <td><a href="EstadoProveedor?idproveedor=<?php echo $fila['idproveedor'] ?>&estado_proveedor=<?php echo $fila['estado_proveedor'] ?>"
-                                class="btn btn-danger">Desabilitar</a></td>
-                    <?php } ?>
-                <tr>
-            </tbody>
-            <?php
+                <td><?php echo $fila['idproveedor']; ?></td>
+                <td><?php echo $fila['nombre_proveedor']; ?></td>
+                <td><?php echo $fila['telefono_proveedor']; ?></td>
+                <td><?php echo $fila['ciudad_proveedor']; ?></td>
+                <td class="bg-success"><?php echo $fila['estado_proveedor']; ?></td>
+                <td><a href="ActualizarProveedor?idproveedor=<?php echo $fila['idproveedor'] ?>&nombre_proveedor=<?php echo $fila['nombre_proveedor'] ?>&telefono_proveedor=<?php echo $fila['telefono_proveedor'] ?>&ciudad_proveedor=<?php echo $fila['ciudad_proveedor'] ?>"
+                        class="btn btn-primary">Actualizar</a></td>
+                <td><a href="EstadoProveedor?idproveedor=<?php echo $fila['idproveedor'] ?>&estado_proveedor=<?php echo $fila['estado_proveedor'] ?>"
+                        class="btn btn-danger">Desabilitar</a></td>
+                <?php } ?>
+            <tr>
+        </tbody>
+        <?php
         }
         ?>
     </table>

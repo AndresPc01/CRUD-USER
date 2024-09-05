@@ -6,6 +6,7 @@ $identidad = $_REQUEST["identidad"];
 $nombre = $_REQUEST["nombre"];
 $telefono = $_REQUEST["telefono"];
 $direccion = $_REQUEST["direccion"];
+$estado_cliente = $_REQUEST["estado_cliente"];
 ?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
@@ -60,6 +61,16 @@ $direccion = $_REQUEST["direccion"];
                                     class="form-control">
                             </div>
                         </div>
+                    </div>
+                    <div class="input-group mt-4">
+                        <div class="form-group col-md-6 ">
+                            <label for="">Estado Cliente</label>
+                            <div class="input-group" style="margin-left:-5px;">
+                                <input type="text" name="estado_cliente" value="<?php echo $estado_cliente; ?>"
+                                    class="form-control">
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <input type="submit" class="btn btn-primary mt-4" value="Guardar ">

@@ -1,11 +1,7 @@
 <?php
 session_start();
 include '../../Controllers/ProtectDashboard.php';
-include '../../../config/database.php';
 include '../../../public/css/Plugins.php';
-$sql = mysqli_query($conexion, "SELECT `idcliente`, `identidad`, `nombre`, `telefono`, `direccion` FROM `cliente`") or
-    die("Problemas en el select:" . mysqli_error($conexion));
-
 ?>
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
@@ -33,43 +29,29 @@ $sql = mysqli_query($conexion, "SELECT `idcliente`, `identidad`, `nombre`, `tele
                 </div>
 
             </div>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Clientes
+                        Habilitados</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Clientes
+                        Desabilitados</button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Total de
+                        Clientes</button>
 
-            <div class=" row">
-                <div class="col-md-12">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Identidad</th>
-                                <th>Nombre</th>
-                                <th>Telefono</th>
-                                <th>Direccion</th>
-                                <th>Actualizar</th>
-                                <th>Eliminar</th>
-                            </tr>
-                        </thead>
-                        <?php
-                        while ($fila = mysqli_fetch_array($sql)) {
-                            ?>
-                            <tbody>
-                                <tr>
-                                    <td><?php echo $fila['idcliente']; ?></td>
-                                    <td><?php echo $fila['identidad']; ?></td>
-                                    <td><?php echo $fila['nombre']; ?></td>
-                                    <td><?php echo $fila['telefono']; ?></td>
-                                    <td><?php echo $fila['direccion']; ?></td>
-                                    <td><a href="ActualizarCliente?idcliente=<?php echo $fila['idcliente'] ?>&identidad=<?php echo $fila['identidad'] ?>&telefono=<?php echo $fila['telefono'] ?>&nombre=<?php echo $fila['nombre'] ?>&direccion=<?php echo $fila['direccion'] ?> "
-                                            class="btn btn-primary">Actualizar</a></td>
-                                    <td><a href="./EliminarCliente.php?idcliente=<?php echo $fila['idcliente'] ?>&identidad=<?php echo $fila['identidad'] ?>&telefono=<?php echo $fila['telefono'] ?>&nombre=<?php echo $fila['nombre'] ?>&direccion=<?php echo $fila['direccion'] ?> "
-                                            class="btn btn-primary">Eliminar</a></td>
-                                <tr>
-                            </tbody>
-                            <?php
-                        }
-                        ?>
-                    </table>
                 </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                    tabindex="0"><?php include './ClientesTabla.php' ?></div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                    tabindex="0"><?php include './ClientesDesabilitados.php' ?></div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
+                    tabindex="0">...</div>
             </div>
+
         </div>
 
 </body>
