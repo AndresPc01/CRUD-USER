@@ -49,7 +49,7 @@ include '../../../public/css/Plugins.php';
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
                     tabindex="0"><?php include './ClientesDesabilitados.php' ?></div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
-                    tabindex="0">...</div>
+                    tabindex="0"><?php include './ClientesTotal.php' ?></div>
             </div>
 
         </div>

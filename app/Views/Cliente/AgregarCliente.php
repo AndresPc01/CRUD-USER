@@ -49,6 +49,14 @@ include '../../Controllers/ProtectDashboard.php'; ?>
                             </div>
                         </div>
                     </div>
+                    <div class="input-group mt-5">
+                        <div class="form-group col-md-12 ">
+                            <select class="form-select form-select-lg" name="estado_cliente">
+                                <option>Habilitado</option>
+                                <option>Desabilitado</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <input type="submit" class="btn btn-primary mt-4" value="Guardar Cliente">
                 <a type="button" class="btn btn-secondary" href="./Clientes.php">Volver</a>
