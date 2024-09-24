@@ -1,95 +1,72 @@
 <?php
 session_start();
-include 'menu.php';
-include 'procesoPHP/conexion.php';
+include '../../Controllers/ProtectDashboard.php';
+include '../../../config/database.php';
+$sql=mysqli_query($conexion, "SELECT `idproveedor`, `nombre_proveedor`, `telefono_proveedor`, `ciudad_proveedor` FROM `proveedor`") or
+die("Problemas en el select:" . mysqli_error($conexion));
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <?php include "procesoPHP/plugins.php"; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de registro</title>
+    <?php include '../../../public/css/Plugins.php'; ?>
+    <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
 <body>
+
+    <?php include '../Navbar.php'; ?>
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-warning text-center" role="alert">
-                    REGISTRO DE VENTAS
+        <form method="POST" action="RegistrarVenta">
+            <div class="container-form">
+                <h1>Agregar Venta</h1>
+                <div>
+                    <div class="input-group">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="nombre_producto" placeholder="nombre producto" class="form-control"
+                                style="padding:15px;" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" name="cantidad" placeholder="cantidad" class="form-control"
+                                style="padding:15px;" required>
+                        </div>
+
+
+                    </div>
+
+                    <div class="input-group  mt-4">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="precio_unidad" class="form-control fa fa-eye"
+                                placeholder="precio unidad" style="padding:15px;" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <select name="idproveedor" class="form-select form-select-lg mb-1">
+                                <option value="">Select</option>
+                                <?php while($fila = mysqli_fetch_array($sql)){?>
+                                <option><?php echo $fila['nombre_proveedor']; ?></option>
+                                <?php }?>
+                            </select>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <!-- formulario con accion al addventas.php-->
-                <form method="POST" action="procesoPHP/AddVentas.php">
-                    <div class="row">
-                        <!-- Select Lista de clientes-->
 
 
-                        <?php
-                        $sql = mysqli_query($link, "SELECT idcliente,nombre
-                          FROM cliente
-                          ORDER BY nombre");
-                        ?>
-                        <div class="col-md-5">
-                            <label>Cliente</label>
-                            <select name="cliente" class="form-control" require>
-                                <option value=""> Seleccione cliente</option>
-                                <?php
-                                while ($row = mysqli_fetch_array($sql)) { ?>
-                                <option value="<?= $row['idcliente'] ?>"> <?= $row['nombre'] ?> </option>
-                                <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <!-- Select Lista de productos-->
-
-                        <?php
-                        $sql = mysqli_query($link, "SELECT idproducto,nombre_producto
-                          FROM producto
-                          ORDER BY nombre_producto");
-                        ?>
-
-                        <div class="col-md-5">
-                            <label>Producto</label>
-                            <select name="producto" class="form-control" require>
-                                <option value=""> Seleccione producto</option>
-                                <?php
-                                while ($row = mysqli_fetch_array($sql)) { ?>
-                                <option value="<?= $row['idproducto'] ?>"> <?= $row['nombre_producto'] ?> </option>
-                                <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
 
 
-                        <!-- campo de cantidad de productos-->
-                        <div class="col-md-2">
-                            <label>Cantidad</label>
-                            <input type="text" name="cantidad_producto" class="form-control" required>
-                        </div>
+                <div class="mt-4 ">
+                    <input type="submit" style="width:40vh;" class="btn btn-success" value="Agregar venta">
+                </div>
+        </form>
 
-                    </div>
-                    <br>
-                    <!-- Botones de envio y consulta-->
-                    <div class="row">
-                        <div class="col-md-1">
-                            <input type="submit" class="btn btn-success btn-block" value="Guardar">
-                        </div>
-                        <div class="col-md-1">
-                            <a href="consultaventas.php" class="btn btn-primary">Consultar</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
+
 </body>
 
 </html>

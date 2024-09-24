@@ -58,8 +58,9 @@ RewriteRule ^AgregarUsuario$ app/Views/Usuario/AgregarUsuario.php [NC,L]
 
 #ventas
 RewriteRule ^Ventas\/? app/Views/Ventas/ConsultaVentas.php [NC,L]
-RewriteRule ^AgregarVenta$ app/Views/ventas/AgregarVentas.php [NC,L]
+RewriteRule ^agregar$ app/Views/Ventas/AgregarVenta.php [NC,L]
 
+RewriteRule ^RegistrarVenta$ app/Services/Ventas/AgregarVengtaLogica.php [NC,L]
 #Usuarios Services
 
 RewriteRule ^RegistrarUrLog$ app/Services/Usuario/RegisterLogica.php [NC,L]
