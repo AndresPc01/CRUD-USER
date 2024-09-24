@@ -9,7 +9,7 @@ $sql = mysqli_query($conexion, "INSERT INTO `usuario`(`usuario`, `contrasena`, `
 if (!$sql) {
     echo "datos no enviados";
 } else {
-    header('location:../../../public/index.php');
+    header('location:Login');
 }
 
 ?>

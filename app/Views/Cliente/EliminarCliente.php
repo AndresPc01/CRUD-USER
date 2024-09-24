@@ -18,7 +18,8 @@ $direccion = $_REQUEST["direccion"];
     <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
-<body>
+<body class="d-flex">
+    <?php include '../Navbar.php'; ?>
     <div class="container">
         <form method="post" action="EliminarCLog">
             <div class="container-form">

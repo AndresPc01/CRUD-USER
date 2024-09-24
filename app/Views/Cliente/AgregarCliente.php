@@ -12,8 +12,8 @@ include '../../Controllers/ProtectDashboard.php'; ?>
     <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
-<body>
-
+<body style="d-flex">
+    <?php include '../Navbar.php'; ?>
     <div class="container">
         <form method="post" action="AgregarCLog">
             <div class="container-form">

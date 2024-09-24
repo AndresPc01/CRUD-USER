@@ -16,8 +16,8 @@ $sql = mysqli_query($conexion, "SELECT `idproveedor`, `nombre_proveedor`, `telef
     <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
-<body>
-
+<body class="d-flex">
+    <?php include '../Navbar.php'; ?>
     <div class="container">
         <form method="post" action="../../Services/Productos/AgregarProductoLogica.php">
             <div class="container-form">

@@ -18,8 +18,8 @@ $nombre = $_REQUEST["nombre"];
     <link rel="stylesheet" href="public/css/ActualizarUser.css">
 </head>
 
-<body>
-
+<body class="d-flex">
+    <?php include '../Navbar.php'; ?>
     <div class="container">
         <form method="post" action="../Services/Usuario/EliminarUserLogica.php">
             <div class="container-form">

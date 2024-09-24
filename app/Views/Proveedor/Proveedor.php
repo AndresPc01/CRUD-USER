@@ -1,8 +1,8 @@
 <?php
 session_start();
 include '../../Controllers/ProtectDashboard.php';
+include '../../../public/css/Plugins.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
 
@@ -10,10 +10,9 @@ include '../../Controllers/ProtectDashboard.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD PROVEEDORES</title>
-    <?php include '../../../public/css/Plugins.php' ?>
 </head>
 
-<body>
+<body class="d-flex">
     <?php include '../Navbar.php'; ?>
     <div class="container"
         style="margin-top:15px; background-color:#343A40; padding:10px; border:1px solid; border-radius:15px; min-height:80vh; ">
@@ -24,12 +23,7 @@ include '../../Controllers/ProtectDashboard.php';
                         CRUD DE PROVEEDORES
                     </h1>
                 </div>
-                <div class="d-flex align-items-center" style="margin-left:35px;">
-                    <a href="AgregarProveedor" class=" btn btn-info ">Agregar Nuevo Proveedor</a>
-                </div>
-
             </div>
-
             <div class=" row">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">

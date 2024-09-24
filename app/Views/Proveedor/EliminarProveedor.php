@@ -28,8 +28,8 @@ while ($row = mysqli_fetch_assoc($sql)) {
     <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
-<body>
-
+<body class="d-flex">
+    <?php include '../Navbar.php'; ?>
     <div class="container">
         <form method="post" action="EliminarPrLog">
             <div class="container-form">

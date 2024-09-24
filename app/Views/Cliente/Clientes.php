@@ -12,7 +12,7 @@ include '../../../public/css/Plugins.php';
     <title>CRUD CLIENTES</title>
 </head>
 
-<body>
+<body class="d-flex">
     <?php include '../Navbar.php'; ?>
 
     <div class="container"
@@ -27,7 +27,6 @@ include '../../../public/css/Plugins.php';
                 <div class="d-flex align-items-center" style="margin-left:35px;">
                     <a href="./AgregarCliente.php" class=" btn btn-info ">Agregar Nuevo Cliente</a>
                 </div>
-
             </div>
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">

@@ -53,9 +53,18 @@ RewriteRule ^EliminarPrLog$ app/Services/Proveedores/EliminarProveedorLogica.php
 RewriteRule ^Usuarios\/? app/Views/Usuario/Usuarios.php [NC,L]
 RewriteRule ^ActualizarUsuario$ app/Views/Usuario/ActualizarUser.php [NC,L]
 RewriteRule ^EliminarUsuario$ app/Views/Usuario/EliminarUser.php [NC,L]
+RewriteRule ^AgregarUsuario$ app/Views/Usuario/AgregarUsuario.php [NC,L]
 
 
+#ventas
+RewriteRule ^Ventas\/? app/Views/Ventas/ConsultaVentas.php [NC,L]
+RewriteRule ^AgregarVenta$ app/Views/ventas/AgregarVentas.php [NC,L]
 
+#Usuarios Services
+
+RewriteRule ^RegistrarUrLog$ app/Services/Usuario/RegisterLogica.php [NC,L]
+RewriteRule ^AgregarUrLog$ app/Services/Usuario/AgregarUserLogica.php [NC,L]
+RewriteRule ^ActualizarUrLog$ app/Services/Usuario/ActualizarUserLogica.php [NC,L]
 
 
 

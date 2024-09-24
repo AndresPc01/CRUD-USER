@@ -1,0 +1,13 @@
+
+    .nav-link {
+        background-color: transparent !important;
+        color: #fff !important;
+        /* Asegura que el texto sea visible */
+    }
+
+    .nav-link.active,
+    .nav-link:focus {
+        background-color: #151D29 !important;
+        color: #fff !important;
+        /* O el color que prefieras para el texto */
+    }

@@ -13,17 +13,13 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand">App</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div id="contet">
                 <a href="index" class="boton">Pagina Principal</a>
             </div>
         </div>
     </nav>
 
-    <form method="post" autocomplete="off" action="../../app/Services/Usuario/RegisterLogica.php">
+    <form method="post" autocomplete="off" action="RegistrarUrLog">
 
         <div class="container-form">
             <div id="cont">

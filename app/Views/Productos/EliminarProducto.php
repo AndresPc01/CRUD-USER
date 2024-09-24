@@ -23,8 +23,8 @@ die("Problemas en el select:" . mysqli_error($conexion));
     <link rel="stylesheet" href="public/css/ActualizarProductos.css">
 </head>
 
-<body>
-
+<body class="d-flex">
+    <?php include '../Navbar.php'; ?>
     <div class="container">
         <form method="post" action="EliminarPLog">
             <div class="container-form">
